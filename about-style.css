@@ -1,0 +1,91 @@
+* {
+  font-family: monospace;
+  font-size: medium;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(background1.jpg);
+  background-size:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.505);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  padding: 30px;
+  border: 1px solid 
+  rgb(172, 172, 172);
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+#about-content {
+  background-color: transparent;
+  height: 400px;
+}
+
+#diri {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+#me-sheep {
+  object-fit: cover;
+  height:180px;
+  width: 150px;
+  border: solid white 1px;
+  border-radius: 7px;
+}
+
+#quote {
+  margin: 0 20px;
+  background-color: transparent;
+  justify-content: center;
+  align-content: center;
+  border: solid white 1px;
+  border-radius: 7px;
+}
+
+#diri-lanjut {
+  text-align: left;
+  padding: 5px;
+  background-color: transparent;
+  border: solid white 1px;
+  border-radius: 7px;
+}
+
+.buttons {
+  color: white;
+  background-color: transparent;
+  border: solid white 1px;
+  height: 35px;
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 10px;
+  transition: 0.4s;
+  letter-spacing: 4px;
+}
+
+.buttons:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}

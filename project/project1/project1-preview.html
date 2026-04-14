@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Preview Web: Website Mahasiswa Pertama</title>
+    <link rel="stylesheet" href="project1-preview-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <!-- modal download-->
+    <div id="modal" class="modal-background">
+      <div id="modal-download-content">
+        <span id="close" class="close">X</span><br>
+        <hr>  
+        <p>Apakah anda yakin ingin mengunduh konten ini?</p>
+        <span class="modal-button"><a href="index.html" download>Unduh</a></span>
+      </div>
+    </div>
+
+
+    <!-- end modals -->
+
+    <!-- modal lightbox -->
+      <img id="preview-opened" src="image.png">
+    <!-- end modals -->
+
+
+    <div id="main">
+      <div id="content">
+        <div id="content-left">
+          <img id="preview-container" src="image.png">
+          <a href="index.html" target="_blank"><button class="buttons">Kunjungi Situs</button></a>
+          <a id="download"><button class="buttons">Unduh File</button></a>
+        </div>
+        
+        <div id="content-right">
+          <p>Projek ke-1 (2024)</p><br>
+          <p>&nbsp;Projek ini merupakan latihan pribadi saya dalam mempelajari pemograman web.
+            Referensi utama yang digunakan dalam pembuatan ini adalah laman mengenai HTML pada situs W3schools  .</p>
+          <p>memo: Pengenalan pada HTML.</p>
+        </div>
+      </div>
+      
+      <hr><br>
+      <div id="navigator">
+        <a href="../project.html"><button class="buttons">Kembali</button></a>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("modal");
+      var closed = document.getElementById("close");
+
+      var downloadcontent = document.getElementById("modal-download-content");
+      var downloadbutton = document.getElementById("download");
+
+      var preview = document.getElementById("preview-container");
+      var previewfull = document.getElementById("preview-opened");
+
+      closed.onclick = function() {
+        modal.style.visibility = "hidden";
+      }
+
+       modal.onclick = function() {
+        modal.style.visibility = "hidden";
+        downloadcontent.style.visibility = "hidden";
+        previewfull.style.visibility = "hidden"; 
+      }
+
+      downloadbutton.onclick = function() {
+        modal.style.visibility = "visible";
+        downloadcontent.style.visibility = "visible";
+      }
+
+      preview.onclick = function() {
+        modal.style.visibility = "visible";
+        previewfull.style.visibility = "visible"; 
+      }
+    </script>
+  </body>
+</html>

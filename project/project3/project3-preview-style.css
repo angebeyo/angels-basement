@@ -1,0 +1,191 @@
+* {
+  font-family: monospace;
+  font-size: medium;
+  letter-spacing: 4px;
+  transition: 0.4s;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../images/background1.jpg);
+  background-size:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr  {
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.buttons {
+  color: white;
+  background-color: transparent;
+  border: solid white 1px;
+  width: 200px;
+  height: 35px;
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.buttons:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}
+
+.modal-button {
+  color: white;
+  font: bold;
+  background-color: transparent;
+  height: auto;
+  width: 60px;
+  padding-left: 10px;
+  border: solid white 1px;
+  border-radius: 7px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  color: white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+close:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}
+
+.each-project {
+  background-image: url(../vectors/file-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 5px 5px;
+  height: 60px;
+  width: 200px;
+  padding: 25px;
+}
+
+.each-project:hover {
+  color: rgba(214, 173, 255, 0.874);
+  cursor: pointer;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.505);
+  display: grid;
+  grid-template-columns: 50vw;
+  height: fit-content;
+  padding: 30px;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 10px;
+}
+
+#content-right {
+  text-align: justify;
+  background-color: rgba(245, 245, 245, 0.112);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+#content-left {
+  background-color: rgba(245, 245, 245, 0.112);
+  border-radius: 20px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 250px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+#preview-container {
+
+  height: 42vh;
+  width: 100%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid white 1px;  
+}
+
+.modal-background {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.66);
+  position: fixed;
+  padding-top: 20%;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#preview-opened {
+  position: absolute;
+  visibility: hidden;
+  height: 60vh;
+  padding: 0 40vh;
+  z-index: 2;
+}
+
+#modal-download-content {
+  visibility: hidden;
+  color: white;
+  background-color: rgba(31, 30, 34, 0.758);
+  height: auto;
+  width: 300px;
+  margin: auto;
+  padding: 20px;  
+  border-radius: 10px;
+  border: solid white 1px;
+}
+
+#download-section {
+  background-color: rgb(153, 51, 51);
+  padding-top: 30px;
+  height: 15vh;
+  border: solid white 1px;
+  border-radius: 10px;
+}
+
+#navigator {
+  display: inline-block;
+}

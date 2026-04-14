@@ -1,0 +1,85 @@
+* {
+  font-family: monospace;
+  font-size: medium;
+  letter-spacing: 4px;
+  transition: 0.4s;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../images/background1.jpg);
+  background-size:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(214, 173, 255, 0.874);
+  cursor: pointer;
+}
+
+.buttons {
+  color: white;
+  background-color: transparent;
+  border: solid white 1px;
+  width: 200px;
+  height: 35px;
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.buttons:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.505);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 80vw;
+  padding: 30px;
+  border: 1px solid 
+  rgb(172, 172, 172);
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+#project-container {
+  background-color: rgba(245, 245, 245, 0.112);
+  border-radius: 20px;
+  height: 75vh;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#project-container div {
+  background-image: url(../vectors/file-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 5px;
+  height: 60px;
+  width: 120px;
+  padding: 25px;
+}
+
+#navigator {
+  display: inline-block;
+}

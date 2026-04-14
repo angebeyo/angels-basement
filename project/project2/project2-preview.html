@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Preview Web: Personal Web</title>
+    <link rel="stylesheet" href="project2-preview-style.css">
+  </head>
+  <body>
+    
+    <!-- modal bg -->
+    <div id="modal" class="modal-background">
+    </div>
+    <!-- end modals -->
+
+    <!-- modal lightbox -->
+      <img id="preview-opened" src="image.png">
+    <!-- end modals -->
+
+    <div id="main">
+      <div id="content">
+        <div id="content-left">
+          <img id="preview-container" src="image.png">
+          <a id="download" href="../../index.html"><button class="buttons">Ke hal. utama?</button></a>
+        </div>
+        
+        <div id="content-right">
+          <p>Projek ke-2 (2025 - sekarang)</p><br>
+          <p>&nbsp;Projek ini dibuat sebagai bahan belajar saya kepada web development. 
+            Web ini juga berfungsi sebagai situs utama saya sebagai pengenalan diri, proyek yang saya telah buat,
+             dan lain-lain.</p>
+          <p>memo: Pengenalan pada HTML, CSS, dan JS.</p>
+        </div>
+
+      </div>
+      <hr><br>
+      <div id="navigator">
+        <a href="../project.html"><button class="buttons">Kembali</button></a>
+      </div>
+    </div>
+
+<script>
+      var modalclose = document.getElementById("modal");
+      var preview = document.getElementById("preview-container");
+      var previewfull = document.getElementById("preview-opened");
+
+      preview.onclick = function() {
+        modal.style.visibility = "visible";
+        previewfull.style.visibility = "visible"; 
+      }
+
+      modalclose.onclick = function() {
+        modal.style.visibility = "hidden";
+        previewfull.style.visibility = "hidden"; 
+      }
+    </script>
+  </body>
+</html>

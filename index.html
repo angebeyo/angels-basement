@@ -2,27 +2,36 @@
 <html>
   <head>
     <title>Selamat Datang!</title>
-    <link rel="stylesheet" href="style.css">
-
-  </head>
+    <link rel="stylesheet" href="index-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head> 
   <body>
+    <img id="lightbulb" src="vectors/lightbulb1v.svg"
+    onclick="
+    var img = document.getElementById('lightbulb');
+    if (img.src.includes('lightbulb1v.svg')) {
+      img.src = 'vectors/lightbulb2v.svg'}
+      else {
+        img.src = 'vectors/lightbulb1v.svg'
+      }">
+    
     <div id="main">
       <div id="intro-left">
-        Hai semua! Nama saya <BR> <span style="font-size: large; letter-spacing: 4px;"><span style="color: rgb(188, 120, 255); font-size: large;">A</span>NGELINA BEYONDCE</span>.
+        Hai semua! Nama saya <BR> <span style="font-size: large; letter-spacing: 4px;"><span style="color: rgb(188, 120, 255); font-size: large;">A</span>NGELINA <span style="color: rgb(188, 120, 255); font-size: large;">B</span>EYONDCE</span>.
       </div>
       <img class="intro-picture" src="https://images.squarespace-cdn.com/content/60c749463d53d13fa3ca2c4f/1631916577748-HODBU8CPWWD4U7F1E766/wild0003-1200px.jpg?content-type=image%2Fjpeg" alt="sheep and flowers">
     
       <div id="intro-right">
         Selamat datang di profil saya<br>
-        yang berisi pengenalan dan kontak saya!
+        yang berisi pengenalan dan proyek saya!
       </div>
       <hr style="size: 5px; width: 300px; margin-top: 10 px; margin-bottom: 20px;">
 
-      <button class="buttons"><a href="about.html">Tentang Saya..?</a></button>
+      <a href="/about/about.html"><button class="button-style">Tentang Saya..?</button></a>
 
-      <button class="buttons"><a href="mailto:anggelputri509@gmail.com">Email Saya..?</a></button>
+      <a href="project/project.html"><button class="button-style">Proyek Saya..?</button></a>
 
-      <button class="buttons"><a href="tel:+6282195699943">Telp. Saya..?</a></button>
+      <a href="contact/contact.html"><button class="button-style">Kontak Saya..?</button></a>
 
       <img class="intro-picture" src="https://www.shutterstock.com/image-photo/black-white-sheep-sitting-heather-260nw-2091786550.jpg" alt="cute sheep  ">
     </div>

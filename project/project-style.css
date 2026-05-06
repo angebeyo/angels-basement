@@ -3,6 +3,7 @@
   font-size: medium;
   letter-spacing: 4px;
   transition: 0.4s;
+  scrollbar-color: white rgba(0, 0, 0, 0.632);
 }
 
 html, body {

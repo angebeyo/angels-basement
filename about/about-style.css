@@ -22,15 +22,19 @@ body {
   align-items: center;
 }
 
+hr {
+  width: 100%;
+}
+
 #main {
   background-color: rgba(0, 0, 0, 0.505);
-  display: flex;
-  flex-direction: column;
-  height: 500px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 5px;
+  height: auto;
   width: 500px;
   padding: 30px;
-  border: 1px solid 
-  rgb(172, 172, 172);
+  border: 1px solid rgb(172, 172, 172);
   border-radius: 20px;
   text-align: center;
   color: white;
@@ -38,26 +42,28 @@ body {
 
 #about-content {
   background-color: transparent;
-  height: 400px;
+  height: auto;
+  width: 100%;
 }
 
 #diri {
   display: flex;
   flex-direction: row;
   background-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
-#me-sheep {
+
+#diri-picture {
   object-fit: cover;
-  height:180px;
-  width: 150px;
+  height:auto;
+  width: auto;
+  margin-right: 20px;
   border: solid white 1px;
   border-radius: 7px;
 }
 
-#quote {
-  margin: 0 20px;
+#diri-quote {
   background-color: transparent;
   justify-content: center;
   align-content: center;
@@ -78,6 +84,7 @@ body {
   background-color: transparent;
   border: solid white 1px;
   height: 35px;
+  width: 100%;
   border-radius: 7px;
   padding: 5px;
   margin-bottom: 10px;
@@ -89,3 +96,45 @@ body {
   background-color: rgba(188, 120, 255, 0.621);
   cursor: pointer;
 }
+
+@media screen and (max-width: 1100px) {
+  body {
+    align-items: normal;
+  }
+
+  #about-content {
+  background-color: transparent;
+  height: 30vh;
+  width: 100%;
+  }
+
+  #diri {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  }
+
+  #diri-picture {
+  object-fit: cover;
+  height:auto;
+  max-height: 35vh;
+  width: auto;
+  margin: 0;
+  border: solid white 1px;
+  border-radius: 7px;
+  }
+
+  #diri-lanjut {
+    height: auto;
+    overflow-y: auto;
+    margin-bottom: -5%;
+  }
+
+  #main {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+} 

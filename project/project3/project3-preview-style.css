@@ -20,7 +20,7 @@ body {
 }
 
 hr  {
-  height: 0;
+  height: 1px;
   margin: 0;
   padding: 0;
 }
@@ -38,13 +38,13 @@ a {
   height: 35px;
   border-radius: 7px;
   padding: 5px;
-  margin-bottom: 10px;
 }
 
 .buttons:hover {
   background-color: rgba(188, 120, 255, 0.621);
   cursor: pointer;
 }
+
 
 .modal-button {
   color: white;
@@ -66,103 +66,34 @@ a {
   cursor: pointer;
 }
 
-.close {
-  float: right;
-  color: white;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-close:hover {
-  background-color: rgba(188, 120, 255, 0.621);
-  cursor: pointer;
-}
-
-.each-project {
-  background-image: url(../vectors/file-icon.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 5px 5px;
-  height: 60px;
-  width: 200px;
-  padding: 25px;
-}
-
-.each-project:hover {
-  color: rgba(214, 173, 255, 0.874);
-  cursor: pointer;
-}
-
-#main {
-  background-color: rgba(0, 0, 0, 0.505);
-  display: grid;
-  grid-template-columns: 50vw;
-  height: fit-content;
-  padding: 30px;
-  border: 1px solid rgb(172, 172, 172);
-  border-radius: 20px;
-  text-align: center;
-  color: white;
-}
-
-#content {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-bottom: 10px;
-}
-
-#content-right {
-  text-align: justify;
-  background-color: rgba(245, 245, 245, 0.112);
-  border-radius: 20px;
-  display: inline-block;
-  padding: 10px;
-  margin: 0 5px;
-}
-
-#content-left {
-  background-color: rgba(245, 245, 245, 0.112);
-  border-radius: 20px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  display: grid;
-  grid-template-columns: 250px;
-  padding: 10px;
-  margin: 0 5px;
-}
-
-#preview-container {
-
-  height: 42vh;
-  width: 100%;
-  margin-bottom: 15px;
-  object-fit: cover;
-  object-position: center;
-  cursor: pointer;
-  border-radius: 10px;
-  border: solid white 1px;  
-}
-
 .modal-background {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.66);
   position: fixed;
-  padding-top: 20%;
   height: 100%;
   width: 100%;
   z-index: 1;
+}
+
+#preview-container {
+  height: 42vh;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid white 1px; 
+}
+
+#preview-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%; 
 }
 
 #preview-opened {
   position: absolute;
   visibility: hidden;
   height: 60vh;
-  padding: 0 40vh;
   z-index: 2;
 }
 
@@ -186,6 +117,103 @@ close:hover {
   border-radius: 10px;
 }
 
-#navigator {
-  display: inline-block;
+.close {
+  float: right;
+  color: white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
+
+.close:hover {
+  background-color: rgba(188, 120, 255, 0.621);
+  cursor: pointer;
+}
+
+#main {
+  background-color: rgba(0, 0, 0, 0.505);
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 5px;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+#content-right {
+  text-align: justify;
+  background-color: rgba(245, 245, 245, 0.112);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+#content-left {
+  background-color: rgba(245, 245, 245, 0.112);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 250px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+#navigator {
+  height: fit-content;
+}
+
+  @media screen and (max-width: 1100px) {
+    body {
+      align-items: normal;
+    }
+
+      #main {
+      height: 100%;
+      width: 100%;
+      box-sizing:border-box;
+    }
+
+    #preview-container {
+      height: 20vh;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+      border: solid white 1px; 
+    }
+
+    #preview-opened {
+      position: absolute;
+      visibility: hidden;
+      height: auto;
+      width: 100%; 
+      z-index: 2;
+    }
+
+    #content {
+      grid-template-columns: auto;
+      row-gap: 5px; 
+    }
+
+    #content-left {
+      justify-content: center;
+    }
+
+    #content-right {
+      height: 20vh;
+      overflow: auto;
+    }
+  }

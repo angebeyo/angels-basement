@@ -62,6 +62,7 @@ a:hover {
 
 #project-container {
   background-color: rgba(245, 245, 245, 0.112);
+  overflow: auto;
   border-radius: 20px;
   height: 75vh;
   padding: 10px;
@@ -82,4 +83,10 @@ a:hover {
 
 #navigator {
   display: inline-block;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    align-items: normal;
+  }
 }
